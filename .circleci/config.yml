@@ -11,16 +11,16 @@ jobs:
           name: Show current branch
           command: echo ${CURRENT_BRANCH}
       - restore_cache:
-        keys:
-          - app-{{ checksum "package.json" }}
-          - app-
+          keys:
+            - app-{{ checksum "package.json" }}
+            - app-
       - run:
-        name: Install dependencies
-        command: npm install
+          name: Install dependencies
+          command: npm install
       - save_cache:
-        paths:
-          - node_modules
-        key: app-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+          key: app-{{ checksum "package.json" }}
 
   deploy-to-aws-s3:
     docker:

@@ -44,8 +44,8 @@ jobs:
             npm install
             npm run build
             cd build
-            ../build.zip -r * . [^.]*
-            "Build successful"
+            zip ../build.zip -r * . [^.]*
+            echo "Build successful"
       - run:
           name: Deploy to AWS S3
           command: |
@@ -81,8 +81,8 @@ jobs:
             npm install
             npm run build
             cd build
-            ../build.zip -r * . [^.]*
-            "Build successful"
+            zip ../build.zip -r * . [^.]*
+            echo "Build successful"
       - run:
           name: Deploy to AWS Cloudfront
           command: |

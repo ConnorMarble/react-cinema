@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Fragment, useRef } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect, Fragment, useRef } from 'react';
+import PropTypes from 'prop-types';
 
-import "./Rating.scss";
+import './Rating.scss';
 
 const Rating = ({ rating, totalStars, className }) => {
   const [numberOfStars, setNumberOfStars] = useState();
@@ -45,7 +45,7 @@ const Rating = ({ rating, totalStars, className }) => {
 Rating.propTypes = {
   rating: PropTypes.number.isRequired,
   totalStars: PropTypes.number.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Rating;
